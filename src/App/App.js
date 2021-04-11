@@ -1,20 +1,20 @@
 import React from 'react';
-import Component1 from './component1';
-import Component2 from './component2';
-import Component3 from './component3';
-import Component4 from './component4';
+import HeaderText from './HeaderText';
+import Slider from './Slider';
+import Billing from './Billing';
+import FooterText from './FooterText';
 
 function App() {
   return (
     <>
       <header>
-        <Component1 />
+        <HeaderText />
       </header>
       <main>
-        <Component2 />
-        <Component3 />
+        <Slider />
+        <Billing />
         <hr />
-        <Component4 />
+        <FooterText />
       </main>
     </>
   );

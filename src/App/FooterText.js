@@ -1,7 +1,7 @@
 import React from 'react';
 import iconCheck from '../images/icon-check.svg';
 
-function Component4() {
+function FooterText() {
   return (
     <>
       <div>
@@ -23,4 +23,4 @@ function Component4() {
   );
 }
 
-export default Component4;
+export default FooterText;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Component3() {
+function Billing() {
   return (
     <div>
       <p>monthly billing</p>
@@ -10,4 +10,4 @@ function Component3() {
   );
 }
 
-export default Component3;
+export default Billing;

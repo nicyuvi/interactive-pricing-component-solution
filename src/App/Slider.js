@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Component2() {
+function Slider() {
   return (
     <>
       <p>100k pageviews</p>
@@ -12,4 +12,4 @@ function Component2() {
   );
 }
 
-export default Component2;
+export default Slider;

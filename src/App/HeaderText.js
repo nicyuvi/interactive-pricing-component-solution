@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Component1() {
+function HeaderText() {
   return (
     <>
       <h1>simple, traffic-based pricing</h1>
@@ -10,4 +10,4 @@ function Component1() {
   );
 }
 
-export default Component1;
+export default HeaderText;
