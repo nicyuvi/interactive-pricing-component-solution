@@ -137,18 +137,36 @@ html {
   /* ?font size to base 10 makes calculating rem values eaiser */
   font-size: 10px;
 }
+
 body {
   font-family: 'Manrope', sans-serif;
 }
+
+/* ?variables */
+:root {
+  --grayBlue: hsl(225, 20%, 60%);
+  --darkBlue: hsl(227, 35%, 25%);
+}
+
+/* ?utility classes */
+.main-container {
+  margin: auto;
+  width: 75%;
+  padding: 70px 0;
+}
+
 /** GENERAL **/
 
 /** TYPOGRAPHY **/
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--darkBlue);
 }
 
 header p {
   font-size: 1.5rem;
+  color: var(--grayBlue);
 }
 
 main {
@@ -158,11 +176,32 @@ main {
 /** TYPOGRAPHY **/
 
 /** LAYOUT **/
-
+header {
+  height: 50vh;
+  background: url(./images/bg-pattern.svg);
+}
 /** LAYOUT **/
 
 /** COMPONENTS **/
 /* ?HeaderText */
+header h1,
+header p {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.header-container {
+  position: relative;
+  z-index: 5;
+}
+
+.header-container__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
 /* ?HeaderText */
 
 /* ?Slider */
