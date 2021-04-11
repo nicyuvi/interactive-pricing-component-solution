@@ -3,6 +3,7 @@ import HeaderText from './HeaderText';
 import Slider from './Slider';
 import Billing from './Billing';
 import FooterText from './FooterText';
+import CTAButton from './CTAButton';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Billing />
         <hr />
         <FooterText />
+        <CTAButton />
       </main>
     </>
   );

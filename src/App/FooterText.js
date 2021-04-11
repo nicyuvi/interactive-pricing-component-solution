@@ -18,7 +18,6 @@ function FooterText() {
           <p>Email reports</p>
         </div>
       </div>
-      <button>Start my trial</button>
     </>
   );
 }
