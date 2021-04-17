@@ -152,7 +152,6 @@ body {
 .main-container {
   margin: auto;
   width: 75%;
-  padding: 70px 0;
 }
 
 /** GENERAL **/
@@ -177,8 +176,14 @@ main {
 
 /** LAYOUT **/
 header {
-  height: 50vh;
+  height: 449px;
   background: url(./images/bg-pattern.svg);
+}
+
+main {
+  border: 1px solid red;
+  height: 500px;
+  width: auto;
 }
 /** LAYOUT **/
 
@@ -193,6 +198,7 @@ header p {
 .header-container {
   position: relative;
   z-index: 5;
+  padding: 70px 0;
 }
 
 .header-container__image {
@@ -204,6 +210,10 @@ header p {
 }
 /* ?HeaderText */
 
+/* ?Pricing Component */
+.pricing-container {
+  border: 1px solid red;
+}
 /* ?Slider */
 /* ?Slider */
 
@@ -215,4 +225,5 @@ header p {
 
 /* ?CTAButton */
 /* ?CTAButton */
+/* ?Pricing Component */
 /** COMPONENTS **/

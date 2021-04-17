@@ -1,9 +1,6 @@
 import React from 'react';
 import HeaderText from './HeaderText';
-import Slider from './Slider';
-import Billing from './Billing';
-import FooterText from './FooterText';
-import CTAButton from './CTAButton';
+import PricingComponent from './PricingComponent';
 
 function App() {
   return (
@@ -12,11 +9,7 @@ function App() {
         <HeaderText />
       </header>
       <main>
-        <Slider />
-        <Billing />
-        <hr />
-        <FooterText />
-        <CTAButton />
+        <PricingComponent />
       </main>
     </>
   );
