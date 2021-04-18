@@ -11,6 +11,9 @@ function App() {
       <main>
         <PricingComponent />
       </main>
+      <footer>
+        <h1>more content</h1>
+      </footer>
     </>
   );
 }
