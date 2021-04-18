@@ -3,9 +3,9 @@ import React from 'react';
 function Billing() {
   return (
     <div>
-      <p>monthly billing</p>
+      <p>Monthly Billing</p>
       <p>billing switch</p>
-      <p>yearly billing</p>
+      <p>Yearly Billing</p>
     </div>
   );
 }
