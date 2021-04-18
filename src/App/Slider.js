@@ -3,10 +3,10 @@ import React from 'react';
 function Slider() {
   return (
     <>
-      <p>100k pageviews</p>
+      <p>100K PAGEVIEWS</p>
       <p>slider</p>
       <p>
-        $16.00 <span>/ month</span>
+        <span className='pricing-container__price'>$16.00</span> / month
       </p>
     </>
   );
