@@ -9,7 +9,7 @@ function PricingComponent() {
     <div className='main-container pricing-container'>
       <Slider />
       <Billing />
-      <hr />
+      <hr className='pricing-container__block' />
       <FooterText />
       <CTAButton />
     </div>

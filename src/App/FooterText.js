@@ -4,7 +4,7 @@ import iconCheck from '../images/icon-check.svg';
 function FooterText() {
   return (
     <>
-      <div>
+      <div className='pricing-container__group'>
         <div>
           <img src={iconCheck} alt='check icon' />
           <p>Unlimited websites</p>

@@ -153,7 +153,17 @@ body {
 /* ?utility classes */
 .main-container {
   margin: auto;
-  width: 75%;
+  width: 90%;
+}
+
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-grid-thirds .col {
+  margin: 0 0.3em;
+  flex: 1;
 }
 
 /** GENERAL **/
@@ -190,8 +200,6 @@ header {
 
 main {
   position: relative;
-  height: 100%;
-  width: auto;
 }
 /** LAYOUT **/
 
@@ -220,20 +228,47 @@ header p {
 
 /* ?Pricing Component */
 .pricing-container {
-  /* position: absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); */
+  transform: translate(-50%, -50%);
+  padding: 1em 0;
   border: 1px solid red;
   border-radius: 5px;
   text-align: center;
   color: var(--grayBlue);
   background-color: white;
 }
+
+.pricing-container__group {
+  margin-bottom: 1em;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
 /* ?Slider */
 /* ?Slider */
 
 /* ?Billing */
+.billing-container {
+  width: 95%;
+  margin: auto;
+}
+
+.billing-container__toggle {
+  width: 15%;
+}
+
+.billing-container__text {
+  white-space: nowrap;
+  width: 35%;
+}
 /* ?Billing */
 
 /* ?FooterText */
