@@ -2,10 +2,12 @@ import React from 'react';
 
 function Billing() {
   return (
-    <div>
-      <p>Monthly Billing</p>
-      <p>billing switch</p>
-      <p>Yearly Billing</p>
+    <div className='flex-grid-thirds billing-container pricing-container__group'>
+      <p className='col placeholder'></p>
+      <p className='col billing-container__text'>Monthly Billing</p>
+      <p className='col billing-container__toggle'>toggle</p>
+      <p className='col billing-container__text'>Yearly Billing</p>
+      <p className='col'>-25%</p>
     </div>
   );
 }
