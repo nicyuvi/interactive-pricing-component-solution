@@ -130,6 +130,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 /** CSS RESET **/
 
 /** GENERAL **/
@@ -145,6 +154,9 @@ body {
 
 /* ?variables */
 :root {
+  --strongCyan: hsl(174, 86%, 45%);
+  --lightGrayBlue95: hsl(224, 65%, 95%);
+  --lightGrayBlue87: hsl(223, 50%, 87%);
   --grayBlue: hsl(225, 20%, 60%);
   --darkBlue: hsl(227, 35%, 25%);
   --veryPaleBlue: hsl(230, 100%, 99%);
@@ -164,9 +176,12 @@ body {
   align-items: center;
 }
 
-.flex-grid-thirds .col {
-  margin: 0 0.3em;
+.flex-grid-thirds .col-1 {
   flex: 1;
+}
+
+.flex-grid-thirds .col-2 {
+  flex: 2;
 }
 
 /** GENERAL **/
@@ -260,17 +275,33 @@ hr {
 
 /* ?Billing */
 .billing-container {
-  width: 95%;
   margin: auto;
+  max-width: 400px;
 }
 
 .billing-container__toggle {
-  width: 15%;
+  height: 25px;
+  min-width: 45px;
+  max-width: 45px;
+  background: var(--lightGrayBlue87);
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.billing-container__toggle:hover {
+  background-color: var(--strongCyan);
+  cursor: pointer;
+}
+
+.billing-container__toggle-btn {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: white;
 }
 
 .billing-container__text {
   white-space: nowrap;
-  width: 35%;
 }
 
 .billing-container__discount {
@@ -279,6 +310,13 @@ hr {
   padding: 0.5em;
   border-radius: 15px;
   font-size: 1.25rem;
+}
+
+.placeholder,
+.billing-container__text,
+.billing-container__toggle,
+.billing-container__discount {
+  margin: 0 0.3em;
 }
 /* ?Billing */
 
