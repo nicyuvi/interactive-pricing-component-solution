@@ -7,7 +7,7 @@ function Billing() {
       <p className='col billing-container__text'>Monthly Billing</p>
       <p className='col billing-container__toggle'>toggle</p>
       <p className='col billing-container__text'>Yearly Billing</p>
-      <p className='col'>-25%</p>
+      <p className='col billing-container__discount'>-25%</p>
     </div>
   );
 }

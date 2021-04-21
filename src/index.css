@@ -148,6 +148,8 @@ body {
   --grayBlue: hsl(225, 20%, 60%);
   --darkBlue: hsl(227, 35%, 25%);
   --veryPaleBlue: hsl(230, 100%, 99%);
+  --lightGrayRed: hsl(14, 92%, 95%);
+  --lightRed: hsl(15, 100%, 70%);
 }
 
 /* ?utility classes */
@@ -159,6 +161,7 @@ body {
 .flex-grid-thirds {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .flex-grid-thirds .col {
@@ -268,6 +271,14 @@ hr {
 .billing-container__text {
   white-space: nowrap;
   width: 35%;
+}
+
+.billing-container__discount {
+  background-color: var(--lightGrayRed);
+  color: var(--lightRed);
+  padding: 0.5em;
+  border-radius: 15px;
+  font-size: 1.25rem;
 }
 /* ?Billing */
 
