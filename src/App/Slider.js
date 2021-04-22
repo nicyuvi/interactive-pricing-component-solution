@@ -16,8 +16,10 @@ function Slider() {
 
   return (
     <>
-      <p className='pricing-container__group'>100K PAGEVIEWS</p>
-      <div className='pricing-container__group slide-container'>
+      <p className='pricing-container__group'>
+        <span>100K PAGEVIEWS</span>
+      </p>
+      <div className='slide-container'>
         <input
           type='range'
           min='1'

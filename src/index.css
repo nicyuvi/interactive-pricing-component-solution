@@ -154,6 +154,7 @@ body {
 
 /* ?variables */
 :root {
+  --softCyan: hsl(174, 77%, 80%);
   --strongCyan: hsl(174, 86%, 45%);
   --lightGrayBlue95: hsl(224, 65%, 95%);
   --lightGrayBlue87: hsl(223, 50%, 87%);
@@ -259,7 +260,7 @@ header p {
 }
 
 .pricing-container__group {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 hr {
@@ -271,44 +272,34 @@ hr {
   padding: 0;
 }
 
-/* TODO: Make slider */
+/* TODO: fill left side slider with cyan color */
+/* TODO: add letter spacing for pageviews text */
 /* ?Slider */
 .slide-container {
-  width: 100%;
+  width: 300px;
+  /* margin-bottom same as pricing-container__group */
+  margin: 0 auto 2em;
 }
 
 .slider {
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
-  height: 25px;
-  background: #d3d3d3;
+  height: 10px;
+  background: var(--lightGrayBlue95);
   outline: none;
-  opacity: 0.7;
-  -webkit-transition: 0.2s;
-  transition: opacity 0.2s;
+  border-radius: 10px;
 }
 
-/* Mouse-over effects */
-.slider:hover {
-  opacity: 1;
-}
-
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
+  -webkit-appearance: none;
   appearance: none;
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #4caf50; /* Green background */
-  cursor: pointer; /* Cursor on hover */
-}
-
-.slider::-moz-range-thumb {
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #4caf50; /* Green background */
-  cursor: pointer; /* Cursor on hover */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: url(./images/icon-slider.svg) no-repeat center, var(--strongCyan);
+  cursor: pointer;
+  box-shadow: 0px 15px 25px -7px var(--strongCyan);
 }
 /* ?Slider */
 
