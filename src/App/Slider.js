@@ -1,15 +1,26 @@
 import { React, useState, useEffect } from 'react';
 
 function Slider() {
-  // set slider value state
   const [sliderValue, setSliderValue] = useState(3);
 
-  // update sliderValue state when slider value changes
+  // call when slider value changes
   function sliderCallBack(e) {
-    setSliderValue(e.target.value);
+    let minSliderValue = e.target.min,
+      maxSliderValue = e.target.max,
+      sliderValue = e.target.value;
+
+    // update sliderValue state
+    setSliderValue(sliderValue);
+
+    // update background size
+    e.target.style.backgroundSize =
+      ((sliderValue - minSliderValue) * 100) /
+        (maxSliderValue - minSliderValue) +
+      '% 100%';
   }
 
-  // do something when slider value changes
+  // TODO: display different page views and prices as side effect
+  // run side effects when range slider renders
   useEffect(() => {
     console.log(sliderValue, 'value changing');
   }, [sliderValue]);
