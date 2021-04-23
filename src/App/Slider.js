@@ -15,11 +15,11 @@ function Slider() {
   }, [sliderValue]);
 
   return (
-    <>
+    <div className='slider-container'>
       <p className='pricing-container__group'>
-        <span>100K PAGEVIEWS</span>
+        <span className='slider-container__text'>100K PAGEVIEWS</span>
       </p>
-      <div className='slide-container'>
+      <div className='slider-container__slider'>
         <input
           type='range'
           min='1'
@@ -31,9 +31,9 @@ function Slider() {
         ></input>
       </div>
       <p className='pricing-container__group'>
-        <span className='pricing-container__price'>$16.00</span> / month
+        <span className='slider-container__price'>$16.00</span> / month
       </p>
-    </>
+    </div>
   );
 }
 
