@@ -203,7 +203,7 @@ main {
   font-size: 1.5rem;
 }
 
-.pricing-container__price {
+.slider-container__price {
   color: var(--darkBlue);
   font-size: 2rem;
   font-weight: 800;
@@ -273,9 +273,8 @@ hr {
 }
 
 /* TODO: fill left side slider with cyan color */
-/* TODO: add letter spacing for pageviews text */
 /* ?Slider */
-.slide-container {
+.slider-container__slider {
   width: 300px;
   /* margin-bottom same as pricing-container__group */
   margin: 0 auto 2em;
@@ -300,6 +299,10 @@ hr {
   background: url(./images/icon-slider.svg) no-repeat center, var(--strongCyan);
   cursor: pointer;
   box-shadow: 0px 15px 25px -7px var(--strongCyan);
+}
+
+.slider-container__text {
+  letter-spacing: 0.1rem;
 }
 /* ?Slider */
 
