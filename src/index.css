@@ -171,6 +171,12 @@ body {
   width: 90%;
 }
 
+.flex-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .flex-grid-thirds {
   display: flex;
   justify-content: space-between;
@@ -361,6 +367,14 @@ input[type='range']::-webkit-slider-thumb {
 /* ?Billing */
 
 /* ?FooterText */
+.footer-container {
+  margin: auto;
+  width: 200px;
+}
+
+.footer-container p {
+  margin: 0 0 1em 0.75em;
+}
 /* ?FooterText */
 
 /* ?CTAButton */

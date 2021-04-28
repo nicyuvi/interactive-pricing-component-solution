@@ -5,15 +5,15 @@ function FooterText() {
   return (
     <>
       <div className='footer-container pricing-container__group'>
-        <div>
+        <div className='flex-grid'>
           <img src={iconCheck} alt='check icon' />
           <p>Unlimited websites</p>
         </div>
-        <div>
+        <div className='flex-grid'>
           <img src={iconCheck} alt='check icon' />
           <p>100% data ownership</p>
         </div>
-        <div>
+        <div className='flex-grid'>
           <img src={iconCheck} alt='check icon' />
           <p>Email reports</p>
         </div>
