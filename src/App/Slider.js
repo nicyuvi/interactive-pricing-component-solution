@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from 'react';
 
 function Slider() {
-  const [sliderValue, setSliderValue] = useState(3);
+  const [sliderValue, setSliderValue] = useState(2);
 
   // call when slider value changes
   function sliderCallBack(e) {
@@ -33,8 +33,8 @@ function Slider() {
       <div className='slider-container__slider'>
         <input
           type='range'
-          min='1'
-          max='5'
+          min='0'
+          max='4'
           value={sliderValue}
           onChange={sliderCallBack}
           className='slider'
