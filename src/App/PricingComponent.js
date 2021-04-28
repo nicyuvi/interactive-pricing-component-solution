@@ -5,10 +5,11 @@ import FooterText from './FooterText';
 import CTAButton from './CTAButton';
 
 function PricingComponent() {
-  // !top level state to update toggle button and monthlyTotals
+  // states to update toggle button and monthlyTotals
   const [yearlyBilling, setYearlyBilling] = useState(false);
   const [billingToggle, setBillingToggle] = useState(false);
 
+  // called by toggle btn
   function billingPricesToggle() {
     // toggles active class for billing toggle btn
     setBillingToggle(!billingToggle);

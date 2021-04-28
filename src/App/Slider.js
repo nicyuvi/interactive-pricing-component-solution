@@ -7,11 +7,6 @@ function Slider({ yearlyBilling }) {
   const [pageViews, setPageViews] = useState('100K PAGEVIEWS');
   const [monthlyTotals, setMonthlyTotals] = useState('$16.00');
 
-  // TODO: Apply discounts to monthlyTotals
-  // Apply discounts if toggle is true
-  console.log(yearlyBilling);
-  if (yearlyBilling) console.log('apply discounts');
-
   // call when slider value changes
   function sliderCallBack(e) {
     let minSliderValue = e.target.min,
@@ -28,15 +23,15 @@ function Slider({ yearlyBilling }) {
       '% 100%';
   }
 
-  // run side effects when range slider renders
+  // run side effects when range slider or billing toggle renders
   useEffect(() => {
     // we will pick from this array to display dynamic content
     let pageViewArr = [
-      ['10K PAGEVIEWS', '$8.00'],
-      ['50K PAGEVIEWS', '$12.00'],
-      ['100K PAGEVIEWS', '$16.00'],
-      ['500K PAGEVIEWS', '$24.00'],
-      ['1M PAGEVIEWS', '$36.00'],
+      ['10K PAGEVIEWS', '8'],
+      ['50K PAGEVIEWS', '12'],
+      ['100K PAGEVIEWS', '16'],
+      ['500K PAGEVIEWS', '24'],
+      ['1M PAGEVIEWS', '36'],
     ];
 
     // assign our array content to variables
@@ -45,8 +40,16 @@ function Slider({ yearlyBilling }) {
 
     // use pageViews and monthlyTotals to update state
     setPageViews(pageViews);
-    setMonthlyTotals(monthlyTotals);
-  }, [sliderValue]);
+
+    // Apply discounts if toggle is true
+    if (yearlyBilling) {
+      let monthlyTotalsNumber = parseInt(monthlyTotals, 10) * 0.25;
+      console.log(monthlyTotalsNumber);
+      setMonthlyTotals(monthlyTotalsNumber);
+    } else {
+      setMonthlyTotals(monthlyTotals);
+    }
+  }, [sliderValue, yearlyBilling]);
 
   return (
     <div className='slider-container'>
@@ -65,7 +68,8 @@ function Slider({ yearlyBilling }) {
         ></input>
       </div>
       <p className='pricing-container__group'>
-        <span className='slider-container__price'>{monthlyTotals}</span> / month
+        <span className='slider-container__price'>${monthlyTotals}.00</span> /
+        month
       </p>
     </div>
   );
