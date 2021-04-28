@@ -169,10 +169,10 @@ body {
 /* ?utility classes */
 .main-container {
   margin: auto;
-  width: 90%;
+  width: 340px;
 }
 
-.flex-grid {
+.flex-row {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,6 +217,11 @@ main {
   font-weight: 800;
 }
 
+@media only screen and (min-width: 1440px) {
+  header h1 {
+    font-size: 3rem;
+  }
+}
 /** TYPOGRAPHY **/
 
 /** LAYOUT **/
@@ -393,3 +398,26 @@ input[type='range']::-webkit-slider-thumb {
 /* ?CTAButton */
 /* ?Pricing Component */
 /** COMPONENTS **/
+
+@media only screen and (min-width: 1440px) {
+  .main-container {
+    width: 600px;
+  }
+
+  .header-container__subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-container__subtitle p {
+    margin-left: 5px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
