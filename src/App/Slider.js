@@ -5,7 +5,7 @@ import { React, useState, useEffect } from 'react';
 function Slider({ yearlyBilling }) {
   const [sliderValue, setSliderValue] = useState(2);
   const [pageViews, setPageViews] = useState('100K PAGEVIEWS');
-  const [monthlyTotals, setMonthlyTotals] = useState('$16.00');
+  const [monthlyTotals, setMonthlyTotals] = useState(16);
 
   // call when slider value changes
   function sliderCallBack(e) {
@@ -27,11 +27,11 @@ function Slider({ yearlyBilling }) {
   useEffect(() => {
     // we will pick from this array to display dynamic content
     let pageViewArr = [
-      ['10K PAGEVIEWS', '8'],
-      ['50K PAGEVIEWS', '12'],
-      ['100K PAGEVIEWS', '16'],
-      ['500K PAGEVIEWS', '24'],
-      ['1M PAGEVIEWS', '36'],
+      ['10K PAGEVIEWS', 8],
+      ['50K PAGEVIEWS', 12],
+      ['100K PAGEVIEWS', 16],
+      ['500K PAGEVIEWS', 24],
+      ['1M PAGEVIEWS', 36],
     ];
 
     // assign our array content to variables
@@ -42,13 +42,11 @@ function Slider({ yearlyBilling }) {
     setPageViews(pageViews);
 
     // Apply discounts if toggle is true
-    if (yearlyBilling) {
-      let monthlyTotalsNumber = parseInt(monthlyTotals, 10) * 0.25;
-      console.log(monthlyTotalsNumber);
-      setMonthlyTotals(monthlyTotalsNumber);
-    } else {
-      setMonthlyTotals(monthlyTotals);
-    }
+    let monthlyTotalsDiscount = monthlyTotals * 0.25;
+
+    yearlyBilling
+      ? setMonthlyTotals(monthlyTotalsDiscount)
+      : setMonthlyTotals(monthlyTotals);
   }, [sliderValue, yearlyBilling]);
 
   return (
