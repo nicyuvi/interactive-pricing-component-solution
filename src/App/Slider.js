@@ -2,6 +2,8 @@ import { React, useState, useEffect } from 'react';
 
 function Slider() {
   const [sliderValue, setSliderValue] = useState(2);
+  const [pageViews, setPageViews] = useState('100K PAGEVIEWS');
+  const [monthlyTotals, setMonthlyTotals] = useState('$16.00');
 
   // call when slider value changes
   function sliderCallBack(e) {
@@ -19,16 +21,30 @@ function Slider() {
       '% 100%';
   }
 
-  // TODO: display different page views and prices as side effect
   // run side effects when range slider renders
   useEffect(() => {
-    console.log(sliderValue, 'value changing');
+    // we will pick from this array to display dynamic content
+    let pageViewArr = [
+      ['10K PAGEVIEWS', '$8.00'],
+      ['50K PAGEVIEWS', '$12.00'],
+      ['100K PAGEVIEWS', '$16.00'],
+      ['500K PAGEVIEWS', '$24.00'],
+      ['1M PAGEVIEWS', '$36.00'],
+    ];
+
+    // assign our array content to variables
+    let pageViews = pageViewArr[sliderValue][0];
+    let monthlyTotals = pageViewArr[sliderValue][1];
+
+    // use pageViews and monthlyTotals to update state
+    setPageViews(pageViews);
+    setMonthlyTotals(monthlyTotals);
   }, [sliderValue]);
 
   return (
     <div className='slider-container'>
       <p className='pricing-container__group'>
-        <span className='slider-container__text'>100K PAGEVIEWS</span>
+        <span className='slider-container__text'>{pageViews}</span>
       </p>
       <div className='slider-container__slider'>
         <input
@@ -42,7 +58,7 @@ function Slider() {
         ></input>
       </div>
       <p className='pricing-container__group'>
-        <span className='slider-container__price'>$16.00</span> / month
+        <span className='slider-container__price'>{monthlyTotals}</span> / month
       </p>
     </div>
   );
