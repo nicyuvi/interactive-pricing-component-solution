@@ -1,9 +1,16 @@
 import { React, useState, useEffect } from 'react';
 
-function Slider() {
+// TODO: Change monthly totals depending on billing toggle
+
+function Slider({ yearlyBilling }) {
   const [sliderValue, setSliderValue] = useState(2);
   const [pageViews, setPageViews] = useState('100K PAGEVIEWS');
   const [monthlyTotals, setMonthlyTotals] = useState('$16.00');
+
+  // TODO: Apply discounts to monthlyTotals
+  // Apply discounts if toggle is true
+  console.log(yearlyBilling);
+  if (yearlyBilling) console.log('apply discounts');
 
   // call when slider value changes
   function sliderCallBack(e) {
