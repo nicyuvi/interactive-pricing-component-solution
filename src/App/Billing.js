@@ -1,8 +1,6 @@
 import React from 'react';
 
-// TODO: Add UI toggle functionality
-
-function Billing({ billingPricesToggle }) {
+function Billing({ billingToggle, billingPricesToggle }) {
   return (
     <div className='flex-grid-thirds billing-container pricing-container__group'>
       <p className='col-1 placeholder'></p>
@@ -11,7 +9,11 @@ function Billing({ billingPricesToggle }) {
         className='col-1 billing-container__toggle'
         onClick={billingPricesToggle}
       >
-        <div className='billing-container__toggle-btn'></div>
+        <div
+          className={`billing-container__toggle-btn ${
+            billingToggle ? 'active' : ''
+          }`}
+        ></div>
       </div>
       <p className='col-2 billing-container__text'>Yearly Billing</p>
       <p className='col-1 billing-container__discount'>-25%</p>
