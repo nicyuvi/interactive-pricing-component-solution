@@ -203,6 +203,7 @@ main {
   font-size: 1.5rem;
 }
 
+/* TODO: Add number transition */
 .slider-container__price {
   color: var(--darkBlue);
   font-size: 2rem;
@@ -332,6 +333,7 @@ input[type='range']::-webkit-slider-thumb {
   width: 15px;
   border-radius: 50%;
   background-color: white;
+  transition: 0.3s ease-in-out transform;
 }
 
 .billing-container__toggle-btn.active {
