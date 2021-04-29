@@ -26,7 +26,7 @@ function PricingComponent() {
         billingPricesToggle={billingPricesToggle}
       />
       <hr className='pricing-container__block' />
-      <div className='footer-container'>
+      <div className='footer-container flex-grid'>
         <FooterText />
         <CTAButton />
       </div>
