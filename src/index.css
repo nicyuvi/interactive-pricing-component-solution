@@ -211,7 +211,7 @@ main {
 }
 
 /* TODO: Add number transition */
-.slider-container__price {
+.slider-container__price--bold {
   color: var(--darkBlue);
   font-size: 2rem;
   font-weight: 800;
@@ -233,6 +233,7 @@ header {
 main {
   position: relative;
 }
+
 /** LAYOUT **/
 
 /** COMPONENTS **/
@@ -264,7 +265,7 @@ header p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 1em 0;
+  padding: 2em 0;
   border-radius: 5px;
   text-align: center;
   color: var(--grayBlue);
@@ -399,6 +400,7 @@ input[type='range']::-webkit-slider-thumb {
 /* ?Pricing Component */
 /** COMPONENTS **/
 
+/* desktop layout */
 @media only screen and (min-width: 1440px) {
   .main-container {
     width: 600px;
@@ -412,6 +414,30 @@ input[type='range']::-webkit-slider-thumb {
 
   .header-container__subtitle p {
     margin-left: 5px;
+  }
+
+  /* flex grid */
+  .slider-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px;
+    justify-items: center;
+    align-items: center;
+    padding: 0 2em;
+  }
+
+  .slider-container__text {
+    grid-area: 1 / 2 / 2 / 4;
+  }
+
+  .slider-container__price {
+    grid-area: 1 / 5 / 2 / 7;
+  }
+
+  .slider-container__slider {
+    grid-area: 2 / 2 / 3 / 7;
+    width: 100%;
   }
 
   .footer-container {
