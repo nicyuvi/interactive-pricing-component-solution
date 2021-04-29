@@ -6,7 +6,6 @@ This is a solution to the [Interactive pricing component challenge on Frontend M
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -24,13 +23,9 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Use the slider and toggle to see prices for different page view numbers
 
-### Screenshot
-
-![](./images/interactive-pricing-component-sc.png)
-
 ### Links
 
-- Live Site URL: [Add live site URL here](https://interactive-pricing-component-yuvi.netlify.app/)
+- [View Live Preview](https://interactive-pricing-component-yuvi.netlify.app/)
 
 ## My process
 
