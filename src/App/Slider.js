@@ -49,11 +49,10 @@ function Slider({ yearlyBilling }) {
       : setMonthlyTotals(monthlyTotals);
   }, [sliderValue, yearlyBilling]);
 
-  // TODO: Add responsive UI for desktop
   return (
     <div className='slider-container'>
-      <p className='pricing-container__group'>
-        <span className='slider-container__text'>{pageViews}</span>
+      <p className='slider-container__text pricing-container__group'>
+        <span>{pageViews}</span>
       </p>
       <div className='slider-container__slider'>
         <input
@@ -66,9 +65,11 @@ function Slider({ yearlyBilling }) {
           id='slider'
         ></input>
       </div>
-      <p className='pricing-container__group'>
-        <span className='slider-container__price'>${monthlyTotals}.00</span> /
-        month
+      <p className='slider-container__price pricing-container__group'>
+        <span className='slider-container__price--bold'>
+          ${monthlyTotals}.00
+        </span>{' '}
+        / month
       </p>
     </div>
   );
