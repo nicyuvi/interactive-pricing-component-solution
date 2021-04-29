@@ -378,8 +378,12 @@ input[type='range']::-webkit-slider-thumb {
   width: 200px;
 }
 
-.footer-container p {
-  margin: 0 0 1em 0.5em;
+.footer-container__text {
+  margin-bottom: 1em;
+}
+
+.footer-container__text p {
+  margin-left: 0.5em;
 }
 /* ?FooterText */
 
@@ -450,7 +454,7 @@ input[type='range']::-webkit-slider-thumb {
     width: 100%;
   }
 
-  .footer-container__text {
+  .footer-container__text-container {
     grid-area: 1 / 2 / 2 / 4;
     margin: 0;
   }
