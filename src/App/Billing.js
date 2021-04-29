@@ -1,6 +1,21 @@
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 
 function Billing({ billingToggle, billingPricesToggle }) {
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakPoint = 1440;
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+
   return (
     <div className='flex-grid-thirds billing-container pricing-container__group'>
       <p className='col-1 placeholder'></p>
@@ -16,7 +31,9 @@ function Billing({ billingToggle, billingPricesToggle }) {
         ></div>
       </div>
       <p className='col-2 billing-container__text'>Yearly Billing</p>
-      <p className='col-1 billing-container__discount'>-25%</p>
+      <p className='col-1 billing-container__discount'>
+        {width >= breakPoint ? '25% discount' : '-25%'}
+      </p>
     </div>
   );
 }
