@@ -210,7 +210,6 @@ main {
   font-size: 1.5rem;
 }
 
-/* TODO: Add number transition */
 .slider-container__price--bold {
   color: var(--darkBlue);
   font-size: 2rem;
@@ -219,6 +218,10 @@ main {
 
 @media only screen and (min-width: 1440px) {
   header h1 {
+    font-size: 3rem;
+  }
+
+  .slider-container__price--bold {
     font-size: 3rem;
   }
 }
@@ -270,6 +273,7 @@ header p {
   text-align: center;
   color: var(--grayBlue);
   background-color: white;
+  box-shadow: 0px 20px 20px -5px var(--lightGrayBlue95);
 }
 
 .pricing-container__group {
@@ -281,7 +285,7 @@ hr {
   height: 1px;
   border: 0;
   border-top: 1px solid #ccc;
-  margin: 1em 0;
+  margin: 2em 0;
   padding: 0;
 }
 
@@ -378,8 +382,12 @@ input[type='range']::-webkit-slider-thumb {
   width: 200px;
 }
 
-.footer-container p {
-  margin: 0 0 1em 0.75em;
+.footer-container__text {
+  margin-bottom: 1em;
+}
+
+.footer-container__text p {
+  margin-left: 0.5em;
 }
 /* ?FooterText */
 
@@ -402,6 +410,15 @@ input[type='range']::-webkit-slider-thumb {
 
 /* desktop layout */
 @media only screen and (min-width: 1440px) {
+  .flex-grid {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
   .main-container {
     width: 600px;
   }
@@ -416,34 +433,48 @@ input[type='range']::-webkit-slider-thumb {
     margin-left: 5px;
   }
 
-  /* flex grid */
-  .slider-container {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 0px;
-    justify-items: center;
-    align-items: center;
-    padding: 0 2em;
-  }
-
   .slider-container__text {
-    grid-area: 1 / 2 / 2 / 4;
+    grid-area: 1 / 2 / 2 / 6;
+    display: flex;
+    justify-content: flex-start;
   }
 
   .slider-container__price {
-    grid-area: 1 / 5 / 2 / 7;
+    grid-area: 1 / 9 / 2 / 13;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
   }
 
   .slider-container__slider {
-    grid-area: 2 / 2 / 3 / 7;
+    grid-area: 2 / 2 / 3 / 13;
     width: 100%;
   }
 
+  .billing-container {
+    max-width: 500px;
+  }
+
+  .flex-grid-thirds .col-2 {
+    flex: 1 1;
+  }
+
   .footer-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    grid-template-rows: repeat(1, 1fr);
+    margin: 0;
+    width: 100%;
+  }
+
+  .footer-container__text-container {
+    grid-area: 1 / 2 / 2 / 6;
+    margin: 0;
+  }
+
+  .footer-container__text {
+    justify-content: flex-start;
+  }
+
+  .footer-container__btn {
+    grid-area: 1 / 9 / 2 / 13;
   }
 }

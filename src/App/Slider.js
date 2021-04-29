@@ -50,7 +50,7 @@ function Slider({ yearlyBilling }) {
   }, [sliderValue, yearlyBilling]);
 
   return (
-    <div className='slider-container'>
+    <div className='slider-container flex-grid'>
       <p className='slider-container__text pricing-container__group'>
         <span>{pageViews}</span>
       </p>
