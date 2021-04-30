@@ -63,6 +63,7 @@ function Slider({ yearlyBilling }) {
           onChange={sliderCallBack}
           className='slider'
           id='slider'
+          aria-label='slider'
         ></input>
       </div>
       <p className='slider-container__price pricing-container__group'>
