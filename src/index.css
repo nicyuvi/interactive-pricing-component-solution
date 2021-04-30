@@ -150,6 +150,8 @@ html {
 body {
   background-color: var(--veryPaleBlue);
   font-family: 'Manrope', sans-serif;
+  max-width: 1440px;
+  margin: auto;
 }
 
 /* ?variables */
