@@ -40,7 +40,7 @@ Users should be able to:
 
 ### What I learned
 
-In this project I solidified my React skills including building components, passing props, useState and useEffect.
+In this project I solidified my React skills such as building components, passing props, and using useState and useEffect.
 
 ### Continued development
 
